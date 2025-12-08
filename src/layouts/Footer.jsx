@@ -1,4 +1,4 @@
-function Footer() {
+export default function Footer() {
 
     return (
         <footer class="bg-[#1F2937] text-gray-300">
@@ -52,5 +52,3 @@ function Footer() {
 
     );
 }
-
-export default Footer

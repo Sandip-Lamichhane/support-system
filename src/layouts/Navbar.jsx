@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-function Navbar() {
+export default function Navbar() {
     return (
         <header className="bg-white shadow-md fixed top-0 z-50 w-full">
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                <h1 className="text-2xl font-bold text-blue-700">Support Ticket System</h1>
+                <h1 className="text-2xl font-bold text-blue-700">HR Support System</h1>
                 
                 <nav className="space-x-6 hidden md:block">
                     <Link to="/" className="hover:text-blue-600">Home</Link>
@@ -20,5 +20,3 @@ function Navbar() {
         </header>
     );
 }
-
-export default Navbar;
