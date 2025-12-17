@@ -6,6 +6,7 @@ export default function HomePage() {
     const [activeCard, setActiveCard] = useState(0);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setIsVisible(true);
         const interval = setInterval(() => {
             setActiveCard((prev) => (prev + 1) % 3);

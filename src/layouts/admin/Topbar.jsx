@@ -50,7 +50,7 @@ const Topbar = ({ sidebarOpen, setSidebarOpen }) => {
                             <User className="w-4 h-4 text-white" />
                         </div>
                         <span className="hidden lg:block text-sm font-medium text-gray-700">
-                            Admin User
+                            Admin
                         </span>
                     </button>
                 </div>

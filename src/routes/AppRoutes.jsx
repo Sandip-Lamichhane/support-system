@@ -6,6 +6,7 @@ import AdminLayout from "../layouts/admin/AdminLayout";
 import Register from "../pages/Register";
 import AdminDashboard from "../features/dashboard/AdminDashboard";
 import UserManagement from "../features/users/Users";
+import Tickets from "../features/tickets/Tickets";
 
 export default function AppRoutes() {
     return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
 
             <Route path="/admin" element={<AdminLayout />} >
                 <Route path="dashboard" element={<AdminDashboard />} />
+                <Route path="tickets" element={<Tickets />} />
                 <Route path="users" element={<UserManagement />} />
             </Route>
         </Routes>

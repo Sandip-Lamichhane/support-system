@@ -4,7 +4,7 @@ import { Search, Plus, Download, Edit, Trash2, MoreVertical, Mail, Phone, Check,
 const UserManagement = () => {
     const [selectedUsers, setSelectedUsers] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [filterStatus, setFilterStatus] = useState('all');
+    const [filterStatus, setFilterStatus] = useState('active');
 
     const users = [
         { id: 1, name: 'John Smith', email: 'john.smith@example.com', phone: '+1 234-567-8900', role: 'Admin', status: 'Active', joined: '2024-01-15', avatar: 'JS' },

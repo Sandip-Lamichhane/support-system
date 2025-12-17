@@ -1,8 +1,11 @@
+import { Navigate, useNavigate } from "react-router-dom";
+
 export default function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Call your API here (e.g., axios.post("/login"))
     };
+    const navigate = useNavigate();
 
     return (
         <section className="bg-[#CEE1FF] flex items-center justify-center min-h-screen">
@@ -51,6 +54,7 @@ export default function Login() {
 
                     <button
                         type="submit"
+                        onClick={() => navigate ("/admin")}
                         className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 cursor-pointer transition duration-200"
                     >
                         Login

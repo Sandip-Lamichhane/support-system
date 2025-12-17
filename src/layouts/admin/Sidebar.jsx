@@ -4,14 +4,16 @@ import {
     BarChart3,
     Settings,
     LogOut,
+    Ticket,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = ({ sidebarOpen }) => {
     const menuItems = [
-        { path: "/admin", icon: Home, label: "Dashboard", end: true },
+        { path: "/admin/dashboard", icon: Home, label: "Dashboard", end: true },
+        { path: "/admin/tickets", icon: Ticket, label: "Tickets" },
         { path: "/admin/users", icon: Users, label: "Users" },
-        { path: "/admin/analytics", icon: BarChart3, label: "Analytics" },
+        // { path: "/admin/analytics", icon: BarChart3, label: "Analytics" },
         { path: "/admin/settings", icon: Settings, label: "Settings" },
     ];
 
