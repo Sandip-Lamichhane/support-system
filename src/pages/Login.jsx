@@ -54,7 +54,7 @@ export default function Login() {
 
                     <button
                         type="submit"
-                        onClick={() => navigate ("/admin")}
+                        onClick={() => navigate ("/admin/dashboard")}
                         className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 cursor-pointer transition duration-200"
                     >
                         Login
