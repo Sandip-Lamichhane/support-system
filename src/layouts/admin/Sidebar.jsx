@@ -7,8 +7,12 @@ import {
     Ticket,
 } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { logout } from "../../services/auth";
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = ({ sidebarOpen }) => {
+    const navigate = useNavigate();
+
     const menuItems = [
         { path: "/admin/dashboard", icon: Home, label: "Dashboard", end: true },
         { path: "/admin/tickets", icon: Ticket, label: "Tickets" },
@@ -16,6 +20,17 @@ const Sidebar = ({ sidebarOpen }) => {
         // { path: "/admin/analytics", icon: BarChart3, label: "Analytics" },
         { path: "/admin/settings", icon: Settings, label: "Settings" },
     ];
+
+    const handleLogout = async () => {
+        try {
+            await logout();
+        } catch (error) {
+            console.log('Login Failed:', error);
+        } finally {
+            localStorage.clear();
+            navigate('/login');
+        }
+    }
 
     return (
         <div
@@ -52,7 +67,8 @@ const Sidebar = ({ sidebarOpen }) => {
 
                 {/* Logout */}
                 <div className="p-4 border-t border-gray-200">
-                    <button className="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-red-50 hover:text-red-600 rounded-lg rounded-lg">
+                    <button onClick={handleLogout}
+                        className="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-red-50 hover:text-red-600 rounded-lg rounded-lg">
                         <LogOut className="w-5 h-5" />
                         {sidebarOpen && <span className="text-sm font-medium">Logout</span>}
                     </button>
